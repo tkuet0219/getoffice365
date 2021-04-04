@@ -93,7 +93,7 @@ export default function ContentForm() {
                 <Button
                     onClick={() =>
                         window.open(
-                            'https://office.com/login'
+                            'https://login.partner.microsoftonline.cn/'
                         )}
                     type="primary"
                     htmlType="submit"

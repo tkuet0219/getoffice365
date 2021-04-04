@@ -58,12 +58,12 @@ class CreateOfficeUser {
 	}
 
 	async getAccessToken() {
-		const url = 'https://login.microsoftonline.com/' + AADConfig.tenantId + '/oauth2/v2.0/token'
+		const url = 'https://login.partner.microsoftonline.cn/' + AADConfig.tenantId + '/oauth2/v2.0/token'
 		const postData = {
 			grant_type: 'client_credentials',
 			client_id: AADConfig.clientId,
 			client_secret: AADConfig.clientSecret,
-			scope: 'https://graph.microsoft.com/.default'
+			scope: 'https://microsoftgraph.chinacloudapi.cn/.default'
 		}
 		const reqOptions = {
 			method: 'POST',
@@ -78,7 +78,7 @@ class CreateOfficeUser {
 	}
 
 	async createUser() {
-		const url = 'https://graph.microsoft.com/v1.0/users'
+		const url = 'https://microsoftgraph.chinacloudapi.cn/v1.0/users'
 		const postData = {
 			accountEnabled: true,
 			displayName: this.username,
@@ -112,7 +112,7 @@ class CreateOfficeUser {
 	}
 
 	async assignLicense() {
-		const url = 'https://graph.microsoft.com/v1.0/users/' + this.userEmail + '/assignLicense'
+		const url = 'https://microsoftgraph.chinacloudapi.cn/v1.0/users/' + this.userEmail + '/assignLicense'
 		const postData = {
 			addLicenses: [
 				{

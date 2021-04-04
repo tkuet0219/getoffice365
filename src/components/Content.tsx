@@ -64,7 +64,7 @@ export default function Content() {
                                 size="large"
                                 onClick={() =>
                                     window.open(
-                                        'https://office.com/login'
+                                        'https://login.partner.microsoftonline.cn/'
                                     )}
                         >
                             登录
