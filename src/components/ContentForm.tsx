@@ -114,7 +114,7 @@ export default function ContentForm() {
             <Form.Item
                 label="Subscription"
                 name="subscription"
-                rules={[{required: true, message: '必选'}]}
+                rules={[{required: true, message: '必選'}]}
             >
                 <Select placeholder="Choose subscription">
                     {officeConfig.subscriptions.map(subscription => (
